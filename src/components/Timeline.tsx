@@ -5,6 +5,7 @@ import { Briefcase, ChevronDown, GraduationCap, TrendingUp } from "lucide-react"
 import Section from "./ui/Section";
 import Reveal from "./ui/Reveal";
 import Pill from "./ui/Pill";
+import Certificates from "./Certificates";
 import { timeline, type TimelineEntry } from "@/content/profile";
 
 function Entry({ entry, index }: { entry: TimelineEntry; index: number }) {
@@ -137,6 +138,8 @@ export default function Timeline() {
           ) : null,
         )}
       </div>
+
+      <Certificates />
     </Section>
   );
 }

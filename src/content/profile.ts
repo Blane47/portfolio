@@ -25,6 +25,15 @@ export type Project = {
   featured?: boolean;
 };
 
+export type Certificate = {
+  name: string;
+  issuer: string;
+  date: string;          // "Mar 2026" or "2025"
+  credentialId?: string;
+  url?: string;          // verification link
+  image?: string;        // scan/screenshot in /public/certificates/
+};
+
 export type TimelineEntry = {
   kind: "work" | "education";
   role: string;
@@ -167,6 +176,21 @@ export const timeline: TimelineEntry[] = [
     period: "TODO: Year",
     summary: "TODO: subjects and grades, if you want them here.",
   },
+];
+
+/**
+ * Certifications and courses. Renders only when this array has entries,
+ * so it can stay empty until there is something worth listing.
+ */
+export const certificates: Certificate[] = [
+  // {
+  //   name: "AWS Certified Cloud Practitioner",
+  //   issuer: "Amazon Web Services",
+  //   date: "TODO: Month Year",
+  //   credentialId: "TODO",
+  //   url: "https://…",
+  //   image: "/certificates/aws-ccp.png",
+  // },
 ];
 
 export const contact = {

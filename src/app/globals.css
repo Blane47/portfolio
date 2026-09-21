@@ -37,6 +37,29 @@
 }
 
 .dark {
+  --shadow-raise: 0 1px 2px rgb(0 0 0 / 0.4), 0 8px 24px -10px rgb(0 0 0 / 0.6);
+  --shadow-lift: 0 2px 4px rgb(0 0 0 / 0.45), 0 16px 40px -12px rgb(0 0 0 / 0.7);
+}
+
+/* ---------------------------------------------------------------------------
+   Palettes. Switch by setting data-palette on <html> in layout.tsx.
+   Every pair used in the UI is verified at WCAG AA in both themes.
+   Once a palette is chosen the others can be deleted.
+   --------------------------------------------------------------------------- */
+
+/* Pine — warm paper, deep teal (current) */
+[data-palette="pine"] {
+  --color-paper: #faf9f6;
+  --color-surface: #ffffff;
+  --color-ink: #1a1915;
+  --color-muted: #6b6a60;
+  --color-line: #e6e3db;
+  --color-accent: #0e7c66;
+  --color-accent-strong: #0a6252;
+  --color-accent-soft: #e8f4f0;
+  --color-on-accent: #ffffff;
+}
+.dark[data-palette="pine"] {
   --color-paper: #121210;
   --color-surface: #1b1a17;
   --color-ink: #f2f0ea;
@@ -46,9 +69,104 @@
   --color-accent-strong: #5bd3b6;
   --color-accent-soft: #17302a;
   --color-on-accent: #07211b;
-  --shadow-raise: 0 1px 2px rgb(0 0 0 / 0.4), 0 8px 24px -10px rgb(0 0 0 / 0.6);
-  --shadow-lift: 0 2px 4px rgb(0 0 0 / 0.45), 0 16px 40px -12px rgb(0 0 0 / 0.7);
 }
+
+/* Cobalt — cool neutral, deep blue */
+[data-palette="cobalt"] {
+  --color-paper: #f8f9fb;
+  --color-surface: #ffffff;
+  --color-ink: #14181f;
+  --color-muted: #5b6673;
+  --color-line: #e2e6ec;
+  --color-accent: #1d4ed8;
+  --color-accent-strong: #1e3a8a;
+  --color-accent-soft: #e6edfd;
+  --color-on-accent: #ffffff;
+}
+.dark[data-palette="cobalt"] {
+  --color-paper: #0d1016;
+  --color-surface: #161a22;
+  --color-ink: #eef1f6;
+  --color-muted: #939bab;
+  --color-line: #272d38;
+  --color-accent: #6c9cff;
+  --color-accent-strong: #93b4ff;
+  --color-accent-soft: #16203a;
+  --color-on-accent: #05102b;
+}
+
+/* Ochre — warm paper, burnt amber */
+[data-palette="ochre"] {
+  --color-paper: #faf8f4;
+  --color-surface: #ffffff;
+  --color-ink: #1c1813;
+  --color-muted: #665f51;
+  --color-line: #e8e2d6;
+  --color-accent: #a8530a;
+  --color-accent-strong: #8a4208;
+  --color-accent-soft: #fdf0e3;
+  --color-on-accent: #ffffff;
+}
+.dark[data-palette="ochre"] {
+  --color-paper: #14120f;
+  --color-surface: #1d1a16;
+  --color-ink: #f3efe8;
+  --color-muted: #9c9484;
+  --color-line: #302b24;
+  --color-accent: #f0a13d;
+  --color-accent-strong: #f7bb6b;
+  --color-accent-soft: #33230f;
+  --color-on-accent: #1f1403;
+}
+
+/* Clay — beige, terracotta */
+[data-palette="clay"] {
+  --color-paper: #faf7f3;
+  --color-surface: #ffffff;
+  --color-ink: #1f1815;
+  --color-muted: #6a5e54;
+  --color-line: #e9e0d6;
+  --color-accent: #9a3412;
+  --color-accent-strong: #7c2d12;
+  --color-accent-soft: #fbeae2;
+  --color-on-accent: #ffffff;
+}
+.dark[data-palette="clay"] {
+  --color-paper: #15110f;
+  --color-surface: #1f1a17;
+  --color-ink: #f4efe9;
+  --color-muted: #a0938a;
+  --color-line: #322a25;
+  --color-accent: #f0845c;
+  --color-accent-strong: #f7a184;
+  --color-accent-soft: #351e16;
+  --color-on-accent: #240d05;
+}
+
+/* Carbon — near-black surfaces, electric mint (dark by default) */
+[data-palette="carbon"] {
+  --color-paper: #f7f8f8;
+  --color-surface: #ffffff;
+  --color-ink: #111517;
+  --color-muted: #5c6467;
+  --color-line: #e3e7e8;
+  --color-accent: #0f766e;
+  --color-accent-strong: #115e59;
+  --color-accent-soft: #e3f3f1;
+  --color-on-accent: #ffffff;
+}
+.dark[data-palette="carbon"] {
+  --color-paper: #0a0c0d;
+  --color-surface: #141719;
+  --color-ink: #eef2f3;
+  --color-muted: #8f989c;
+  --color-line: #252a2d;
+  --color-accent: #2ee6a8;
+  --color-accent-strong: #6df0c4;
+  --color-accent-soft: #0e2a22;
+  --color-on-accent: #022019;
+}
+
 
 html {
   scroll-behavior: smooth;
