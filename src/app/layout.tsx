@@ -34,9 +34,6 @@ export const metadata: Metadata = {
   },
 };
 
-/** Active colour palette — see the [data-palette] blocks in globals.css. */
-const PALETTE = "pine";
-
 /**
  * Applies the stored theme before first paint so dark-mode visitors
  * never see a flash of the light background.
@@ -54,7 +51,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      data-palette={PALETTE}
       className={`${inter.variable} ${display.variable} h-full antialiased`}
       suppressHydrationWarning
     >
