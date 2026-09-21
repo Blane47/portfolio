@@ -110,7 +110,9 @@ export const about = {
     "and I have been shipping my own projects since.",
   ],
   note:
-    "TODO: what you are learning or building right now — one honest sentence.",
+    "Still a student, building school and internship projects. I am also a " +
+    "Millennium Fellow — a leadership programme run by the UN Academic Impact " +
+    "and the Millennium Campus Network.",
 };
 
 export const skillGroups: SkillGroup[] = [
@@ -295,7 +297,7 @@ export const timeline: TimelineEntry[] = [
     role: "B.Tech, Software Engineering",
     org: "College of Technology, University of Buea",
     location: "Buea, Cameroon",
-    period: "2024 – 2026",
+    period: "2024 – present",
     type: "Final year",
     summary:
       "TODO: the courses that mattered most, and your final-year project if " +
@@ -306,20 +308,18 @@ export const timeline: TimelineEntry[] = [
     role: "GCE Advanced Level",
     org: "Sacred Heart College, Mankon",
     location: "Bamenda, Cameroon",
-    period: "2022 – 2023",
+    period: "2022 – 2024",
     result: "24 / 25 points",
     summary: "Completed high school in the sciences.",
-    // certificateUrl: "TODO: link to the A Level certificate PDF",
   },
   {
     kind: "education",
     role: "GCE Ordinary Level",
     org: "Sacred Heart College, Mankon",
     location: "Bamenda, Cameroon",
-    period: "2017 – 2021",
+    period: "2017 – 2022",
     result: "30 / 33 points",
     summary: "Completed secondary school in the sciences.",
-    // certificateUrl: "TODO: link to the O Level certificate",
   },
 ];
 
