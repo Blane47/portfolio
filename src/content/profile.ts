@@ -213,7 +213,7 @@ export const projects: Project[] = [
       "uploads, and two React Native apps — one for collection crews on route, " +
       "one for residents reporting and tracking pickups.",
     stack: ["React", "Vite", "React Native", "Expo", "Node.js", "Express", "MongoDB", "Leaflet"],
-    image: "/projects/ecopulse-dashboard.png",
+    image: "/projects/ecopulse-app.png",
     repo: "https://github.com/Blane47/EcoPulse",
     featured: true,
   },
