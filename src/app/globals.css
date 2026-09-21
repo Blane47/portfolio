@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+/* Dark mode is class-driven so the header toggle can control it. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Type ------------------------------------------------------------ */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: var(--font-display), ui-serif, Georgia, serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* Palette --------------------------------------------------------- */
+  /* Warm paper rather than the cool lavender of the reference site. */
+  --color-paper: #faf9f6;
+  --color-surface: #ffffff;
+  --color-ink: #1a1915;
+  --color-muted: #6b6a60;
+  --color-line: #e6e3db;
+
+  /* One accent, deep teal-green. Every other colour is a neutral. */
+  --color-accent: #0e7c66;
+  --color-accent-strong: #0a6252;
+  --color-accent-soft: #e8f4f0;
+  /* Text that sits on top of the accent fill. Flips in dark mode, where the
+     accent is light and white text would drop to ~2:1 contrast. */
+  --color-on-accent: #ffffff;
+
+  /* Rhythm ---------------------------------------------------------- */
+  --radius-card: 1rem;
+  --radius-pill: 999px;
+
+  /* Layered shadows: tight ambient + soft directional. */
+  --shadow-raise: 0 1px 2px rgb(26 25 21 / 0.05), 0 8px 24px -10px rgb(26 25 21 / 0.12);
+  --shadow-lift: 0 2px 4px rgb(26 25 21 / 0.06), 0 16px 40px -12px rgb(26 25 21 / 0.18);
+
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.dark {
+  --color-paper: #121210;
+  --color-surface: #1b1a17;
+  --color-ink: #f2f0ea;
+  --color-muted: #9b998e;
+  --color-line: #2e2c27;
+  --color-accent: #3fbfa0;
+  --color-accent-strong: #5bd3b6;
+  --color-accent-soft: #17302a;
+  --color-on-accent: #07211b;
+  --shadow-raise: 0 1px 2px rgb(0 0 0 / 0.4), 0 8px 24px -10px rgb(0 0 0 / 0.6);
+  --shadow-lift: 0 2px 4px rgb(0 0 0 / 0.45), 0 16px 40px -12px rgb(0 0 0 / 0.7);
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Anchor links must clear the floating header. */
+  scroll-padding-top: 7rem;
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Keyboard focus stays visible everywhere. */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
