@@ -220,27 +220,28 @@ export const projects: Project[] = [
   {
     slug: "cultia",
     title: "CULTIA",
-    tagline: "A cultural education platform for Cameroon — system design.",
+    tagline: "A cultural education platform for Cameroon.",
     description:
-      "My B.Tech design project, with a senior student: a platform for teaching " +
-      "and preserving Cameroonian cultural heritage. I modelled the domain end " +
-      "to end — users and roles, regions, tribes and local languages, and a " +
-      "content pipeline with draft, review, published and archived states — as " +
-      "ER, class and use-case diagrams.",
-    stack: ["System design", "ER modelling", "UML", "Mermaid"],
-    image: "/projects/cultia.png",
+      "My B.Tech design project, built with a senior student: a platform for " +
+      "teaching and preserving Cameroonian heritage across regions, tribes and " +
+      "local languages, with learning paths, a contributor and review workflow, " +
+      "and a community feed. I modelled the domain end to end — ER, class and " +
+      "use-case diagrams — and worked on the platform design.",
+    stack: ["System design", "ER modelling", "UML", "Learning paths", "Content workflow"],
+    image: "/projects/cultia-platform.png",
     repo: "https://github.com/Blane47/CULTIA",
   },
   {
     slug: "dynamic-restaurant",
-    title: "Dynamic Restaurant",
+    title: "Saveurs du Cameroun",
     tagline: "Online ordering for a Cameroonian restaurant.",
     description:
-      "A dynamic restaurant site where customers browse meals, place orders and " +
-      "manage their account. Built server-side in PHP with a relational schema " +
-      "behind it, for the CEC319 Dynamic Web Development course at UB.",
+      "A restaurant site where customers browse dishes by category, add to a " +
+      "cart, register and check out with a printable receipt, backed by an " +
+      "admin side for managing the menu and orders. Built server-side in PHP " +
+      "with MySQL, for the CEC319 Dynamic Web Development course at UB.",
     stack: ["PHP", "MySQL", "JavaScript", "HTML & CSS"],
-    image: "/projects/restaurant.png",
+    image: "/projects/restaurant-menu.png",
     repo: "https://github.com/Blane47/Dynamic_Restaurant",
   },
 ];
