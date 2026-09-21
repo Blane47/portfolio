@@ -44,6 +44,8 @@ export type TimelineEntry = {
   summary: string;
   highlights?: string[];    // revealed when the card is expanded
   impact?: string[];
+  result?: string;          // e.g. "30 / 33 points"
+  certificateUrl?: string;  // link to view or download the certificate
 };
 
 export const profile = {
@@ -94,25 +96,28 @@ export const about = {
 
 export const skillGroups: SkillGroup[] = [
   {
-    name: "Languages",
-    blurb: "The languages I reach for day to day.",
-    items: ["TypeScript", "JavaScript", "Python", "PHP", "SQL"],
+    name: "Languages & markup",
+    blurb: "What I write day to day.",
+    items: ["JavaScript", "HTML", "CSS"],
   },
   {
     name: "Frontend",
-    blurb: "Building interfaces that stay fast and readable as they grow.",
-    items: ["React", "Next.js", "Tailwind CSS", "HTML & CSS"],
+    blurb: "Building layouts that hold up across screen sizes.",
+    items: ["CSS Grid", "Flexbox", "Responsive design", "Bootstrap", "DOM scripting"],
   },
   {
-    name: "Backend & Data",
-    blurb: "APIs, data modelling, and the layer underneath the UI.",
-    items: ["Node.js", "PostgreSQL", "MySQL", "REST APIs", "Prisma"],
+    name: "Backend",
+    blurb: "The server layer underneath the pages.",
+    items: ["Node.js", "Express", "EJS", "REST APIs", "Middleware"],
   },
   {
-    name: "Platform & Tooling",
-    blurb: "Getting work off my machine and in front of people.",
-    items: ["Git", "Vercel", "Linux", "Docker", "AWS"],
+    name: "Tooling",
+    blurb: "How I build, test and ship.",
+    items: ["Git", "npm", "Postman", "Command line"],
   },
+  // TODO: add anything else you have genuinely used — React, Next.js,
+  // TypeScript, PostgreSQL, Python. I removed my earlier guesses rather
+  // than list skills you have not confirmed.
 ];
 
 export const projects: Project[] = [
@@ -149,32 +154,57 @@ export const projects: Project[] = [
 export const timeline: TimelineEntry[] = [
   {
     kind: "work",
-    role: "TODO: Intern role title",
-    org: "Zinger Systems",
+    role: "Full Stack Web Development Intern",
+    org: "Techarcgram",
     location: "Buea, Cameroon",
-    period: "TODO: Month Year – Month Year",
+    period: "2025",
     type: "Internship",
-    summary: "TODO: one or two sentences on what the team did and your part in it.",
+    summary:
+      "Completed a structured full-stack web development programme, working " +
+      "through the front end, the server layer and REST APIs, and building a " +
+      "series of small applications at each stage.",
     highlights: [
-      "TODO: a thing you built or shipped",
-      "TODO: a technology you picked up on the job",
+      "Built responsive layouts with CSS Grid, Flexbox, positioning and media queries",
+      "Wrote server-side JavaScript with Node.js and Express, including routing and middleware",
+      "Rendered dynamic pages with EJS templates and partials",
+      "Consumed and tested REST APIs with Axios and Postman, including authenticated requests",
+      "Built a blog application with full create, edit and delete flows",
+      "Worked day to day in Git, the command line and npm",
     ],
-    impact: ["TODO: an outcome, ideally with a number"],
+    // TODO: if you shipped anything for a real Techarcgram client or an
+    // internal tool, add it here — that carries far more weight than
+    // coursework. See the note about this in our chat.
   },
   {
     kind: "education",
-    role: "TODO: Degree programme",
+    role: "Bachelor of Technology",
     org: "College of Technology, University of Buea",
     location: "Buea, Cameroon",
-    period: "TODO: Year – Year",
-    summary: "TODO: focus areas, notable coursework, or final-year project.",
+    period: "TODO: Year – present",
+    type: "In progress",
+    summary:
+      "TODO: your field of study and what you have focused on — key courses, " +
+      "and your final-year project if you have one.",
   },
   {
     kind: "education",
     role: "GCE Advanced Level",
-    org: "TODO: School name",
-    period: "TODO: Year",
-    summary: "TODO: subjects and grades, if you want them here.",
+    org: "Sacred Heart College, Mankon",
+    location: "Bamenda, Cameroon",
+    period: "2022 – 2023",
+    result: "24 / 25 points",
+    summary: "TODO: your A Level subjects.",
+    // certificateUrl: "TODO: link to the A Level certificate PDF",
+  },
+  {
+    kind: "education",
+    role: "GCE Ordinary Level",
+    org: "Sacred Heart College, Mankon",
+    location: "Bamenda, Cameroon",
+    period: "2017 – 2021",
+    result: "30 / 33 points",
+    summary: "TODO: your O Level subjects, if you want them listed.",
+    // certificateUrl: "TODO: link to the O Level certificate",
   },
 ];
 

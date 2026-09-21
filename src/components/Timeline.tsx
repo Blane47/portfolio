@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Briefcase, ChevronDown, GraduationCap, TrendingUp } from "lucide-react";
+import { Briefcase, ChevronDown, ExternalLink, GraduationCap, TrendingUp } from "lucide-react";
 import Section from "./ui/Section";
 import Reveal from "./ui/Reveal";
 import Pill from "./ui/Pill";
@@ -27,6 +27,11 @@ function Entry({ entry, index }: { entry: TimelineEntry; index: number }) {
               {entry.period}
             </span>
             {entry.type ? <Pill>{entry.type}</Pill> : null}
+            {entry.result ? (
+              <span className="font-mono text-[11px] font-medium tracking-tight text-accent">
+                {entry.result}
+              </span>
+            ) : null}
           </div>
 
           <h3 className="mt-3 text-lg font-semibold leading-snug">{entry.role}</h3>
@@ -38,6 +43,18 @@ function Entry({ entry, index }: { entry: TimelineEntry; index: number }) {
           </p>
 
           <p className="mt-4 text-sm leading-relaxed text-muted">{entry.summary}</p>
+
+          {entry.certificateUrl ? (
+            <a
+              href={entry.certificateUrl}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="inline-flex h-11 items-center gap-1.5 text-sm font-medium text-accent transition-opacity duration-150 hover:opacity-75"
+            >
+              View certificate
+              <ExternalLink size={14} />
+            </a>
+          ) : null}
 
           {expandable ? (
             <>
