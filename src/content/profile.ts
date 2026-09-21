@@ -275,7 +275,7 @@ export const timeline: TimelineEntry[] = [
     role: "Cloud Computing Intern",
     org: "Zinger Systems",
     location: "Buea, Cameroon",
-    period: "TODO: Month Year – Month Year",
+    period: "Jun 2026 – Sep 2026",
     type: "Internship",
     summary:
       "Worked through AWS solutions-architect training and applied it by " +
