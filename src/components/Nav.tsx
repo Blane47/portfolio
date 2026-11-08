@@ -72,12 +72,14 @@ export default function Nav() {
 
         <div className="flex items-center gap-2">
           <ThemeToggle />
-          <a
-            href={profile.resumeUrl}
-            className="hidden h-11 items-center rounded-pill bg-accent px-5 text-sm font-medium text-on-accent transition-colors duration-150 hover:bg-accent-strong sm:inline-flex"
-          >
-            Résumé
-          </a>
+          {profile.resumeUrl ? (
+            <a
+              href={profile.resumeUrl}
+              className="hidden h-11 items-center rounded-pill bg-accent px-5 text-sm font-medium text-on-accent transition-colors duration-150 hover:bg-accent-strong sm:inline-flex"
+            >
+              Résumé
+            </a>
+          ) : null}
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
@@ -103,13 +105,15 @@ export default function Nav() {
               {l.label}
             </a>
           ))}
-          <a
-            href={profile.resumeUrl}
-            onClick={() => setOpen(false)}
-            className="mt-1 block rounded-[0.6rem] bg-accent px-4 py-3 text-center text-sm font-medium text-on-accent"
-          >
-            Résumé
-          </a>
+          {profile.resumeUrl ? (
+            <a
+              href={profile.resumeUrl}
+              onClick={() => setOpen(false)}
+              className="mt-1 block rounded-[0.6rem] bg-accent px-4 py-3 text-center text-sm font-medium text-on-accent"
+            >
+              Résumé
+            </a>
+          ) : null}
         </div>
       ) : null}
     </header>

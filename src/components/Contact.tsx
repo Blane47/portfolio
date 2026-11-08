@@ -41,13 +41,15 @@ export default function Contact() {
                   <Mail size={16} />
                   {profile.email}
                 </a>
-                <a
-                  href={profile.resumeUrl}
-                  className="inline-flex items-center gap-1.5 rounded-pill border border-line px-6 py-3.5 text-sm font-medium transition-colors duration-150 hover:border-accent hover:text-accent"
-                >
-                  Download résumé
-                  <ArrowUpRight size={15} />
-                </a>
+                {profile.resumeUrl ? (
+                  <a
+                    href={profile.resumeUrl}
+                    className="inline-flex items-center gap-1.5 rounded-pill border border-line px-6 py-3.5 text-sm font-medium transition-colors duration-150 hover:border-accent hover:text-accent"
+                  >
+                    Download résumé
+                    <ArrowUpRight size={15} />
+                  </a>
+                ) : null}
               </div>
 
               <div className="mt-8 flex justify-center">

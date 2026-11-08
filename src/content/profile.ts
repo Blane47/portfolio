@@ -76,7 +76,10 @@ export const profile = {
     "role where I can keep shipping real systems.",
   location: "Buea, South West, Cameroon",
   email: "suhblane@gmail.com",
-  resumeUrl: "/resume.pdf", // TODO: drop your real CV at public/resume.pdf
+  // No CV uploaded yet. While this is null the Resume buttons do not render,
+  // so nothing links to a placeholder file. Set it to "/resume.pdf" once a
+  // real CV is in public/.
+  resumeUrl: null as string | null,
   avatar: "/suh-blane.jpg",
   available: true,
 };
@@ -300,8 +303,9 @@ export const timeline: TimelineEntry[] = [
     period: "2024 – present",
     type: "Final year",
     summary:
-      "TODO: the courses that mattered most, and your final-year project if " +
-      "you have settled on one.",
+      "Final-year software engineering student. The coursework runs from "  +
+      "data structures and databases through web, mobile and cloud "  +
+      "development; the projects above came out of it.",
   },
   {
     kind: "education",
