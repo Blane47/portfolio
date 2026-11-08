@@ -354,5 +354,5 @@ export const siteMeta = {
   description:
     "Suh Blane Sanyang — Software Engineering student at the University of " +
     "Buea building full-stack web applications with Next.js, React, Node and AWS.",
-  url: "https://TODO.vercel.app", // TODO: set once deployed
+  url: "https://suh-blane.vercel.app",
 };
