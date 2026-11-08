@@ -30,6 +30,8 @@ export type Project = {
   image?: string;  // put screenshots in /public/projects/
   href?: string;   // live site
   repo?: string;   // source
+  /** Small badge on the card, e.g. "In progress". Omit for finished work. */
+  status?: string;
   featured?: boolean;
 };
 
@@ -193,6 +195,26 @@ export const projects: Project[] = [
     image: "/projects/hospicare-emr.png",
     href: "https://hospicare-emr.vercel.app",
     repo: "https://github.com/Blane47/hospicare-emr",
+    featured: true,
+  },
+  {
+    slug: "essence-spa-platform",
+    title: "Essence Beauty & Spa",
+    tagline: "AI messaging and booking platform for a spa — client work, in progress.",
+    description:
+      "A unified platform for a beauty and wellness business: customers message " +
+      "on WhatsApp, Instagram or Messenger and an AI agent answers, books and " +
+      "escalates, while staff run the salon from one dashboard — conversations, " +
+      "bookings, customers, services, staff, templates and analytics. Built " +
+      "serverless on AWS, with role-based access for owners, receptionists and " +
+      "staff, and two-way sync with the public website. My largest project so far.",
+    stack: [
+      "React", "TypeScript", "AWS Lambda", "API Gateway", "DynamoDB",
+      "Cognito", "Amazon Bedrock", "Kinesis", "SES & SNS", "CloudFront",
+    ],
+    image: "/projects/essence-spa-dashboard.png",
+    // Client engagement — the repository stays private.
+    status: "In progress",
     featured: true,
   },
   {

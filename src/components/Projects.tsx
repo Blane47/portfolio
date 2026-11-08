@@ -31,6 +31,14 @@ export default function Projects() {
                     Screenshot coming
                   </div>
                 )}
+
+                {/* Status badge — only for work that is still moving. */}
+                {p.status ? (
+                  <span className="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-pill bg-surface/92 px-2.5 py-1 text-[0.7rem] font-medium text-accent shadow-raise backdrop-blur-sm">
+                    <span className="size-1.5 rounded-full bg-accent" />
+                    {p.status}
+                  </span>
+                ) : null}
               </div>
 
               <div className="flex flex-1 flex-col p-6">
