@@ -5,7 +5,7 @@
  * Anything marked TODO is a placeholder waiting on the CV.
  */
 
-export type Social = { label: string; href: string; icon: "github" | "linkedin" | "mail" | "x" };
+export type Social = { label: string; href: string; icon: "github" | "linkedin" | "mail" | "x" | "whatsapp" };
 
 export type Skill = {
   name: string;
@@ -87,7 +87,9 @@ export const profile = {
 export const socials: Social[] = [
   { label: "GitHub", href: "https://github.com/Blane47", icon: "github" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/suh-blane-639090284/", icon: "linkedin" },
-  { label: "Email", href: "mailto:suhblane@gmail.com", icon: "mail" },
+  // The contact section already shows the email as a full button, so the icon
+  // row carries WhatsApp instead of repeating it.
+  { label: "WhatsApp", href: "https://wa.me/237674338492", icon: "whatsapp" },
 ];
 
 /** Small, honest numbers beat inflated ones on a student portfolio. */

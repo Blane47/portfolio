@@ -1,5 +1,5 @@
 import { Mail } from "lucide-react";
-import { GitHubIcon, LinkedInIcon, XIcon } from "./ui/BrandIcons";
+import { GitHubIcon, LinkedInIcon, WhatsAppIcon, XIcon } from "./ui/BrandIcons";
 import { socials } from "@/content/profile";
 
 const ICONS = {
@@ -7,6 +7,7 @@ const ICONS = {
   linkedin: LinkedInIcon,
   x: XIcon,
   mail: Mail,
+  whatsapp: WhatsAppIcon,
 };
 
 export default function Socials({ size = 17 }: { size?: number }) {
