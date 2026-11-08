@@ -76,10 +76,10 @@ export const profile = {
     "role where I can keep shipping real systems.",
   location: "Buea, South West, Cameroon",
   email: "suhblane@gmail.com",
-  // No CV uploaded yet. While this is null the Resume buttons do not render,
-  // so nothing links to a placeholder file. Set it to "/resume.pdf" once a
-  // real CV is in public/.
-  resumeUrl: null as string | null,
+  // One-page CV. Source is cv/resume.html; regenerate with `node cv/build.js`.
+  // The buttons render only while this is non-null, so it can go back to null
+  // if the PDF is ever removed.
+  resumeUrl: "/resume.pdf" as string | null,
   avatar: "/suh-blane.jpg",
   available: true,
 };

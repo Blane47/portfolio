@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Suh Blane Sanyang — CV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif&display=swap" rel="stylesheet" />
+<style>
+  /*
+   * Source for public/resume.pdf — regenerate with: node cv/build.js
+   * Single column with plain-text headings so applicant tracking systems can
+   * parse it. The ochre accent is the portfolio's own.
+   */
+  :root {
+    --ink:    #1c1813;
+    --muted:  #56514a;
+    --faint:  #8b8378;
+    --accent: #a8530a;
+    --line:   #e3ddd2;
+  }
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #fff; }
+  body {
+    font-family: Inter, "Segoe UI", system-ui, sans-serif;
+    color: var(--ink);
+    font-size: 8.8pt;
+    line-height: 1.38;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page { width: 210mm; padding: 10mm 14mm 6mm; }
+
+  /* ---- header ---- */
+  header { border-bottom: 2px solid var(--accent); padding-bottom: 5px; }
+  h1 {
+    font-family: "Instrument Serif", Georgia, serif;
+    font-size: 24pt; font-weight: 400; letter-spacing: -0.2px; line-height: 1.05;
+  }
+  .role { color: var(--accent); font-weight: 600; font-size: 10pt; margin-top: 3px; letter-spacing: 0.2px; }
+  .contacts { margin-top: 7px; font-size: 8.6pt; color: var(--muted); }
+  .contacts a { color: var(--muted); text-decoration: none; }
+  .contacts span + span::before { content: "·"; margin: 0 7px; color: var(--faint); }
+
+  /* ---- sections ---- */
+  h2 {
+    font-size: 8.4pt; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1.3px; color: var(--accent);
+    margin: 9px 0 4px; padding-bottom: 2px; border-bottom: 1px solid var(--line);
+  }
+  .summary { margin-top: 7px; color: var(--muted); }
+
+  .entry { margin-bottom: 6px; break-inside: avoid; }
+  .entry-head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+  .entry-title { font-weight: 600; font-size: 9.8pt; }
+  .entry-org { color: var(--muted); font-weight: 500; }
+  .entry-meta { color: var(--faint); font-size: 8.3pt; white-space: nowrap; }
+
+  ul { list-style: none; margin-top: 3px; }
+  li { position: relative; padding-left: 11px; margin-top: 1.5px; color: var(--muted); }
+  li::before { content: ""; position: absolute; left: 2px; top: 6.5px; width: 3px; height: 3px; border-radius: 50%; background: var(--accent); }
+
+  .proj { margin-bottom: 5px; break-inside: avoid; }
+  .proj-head { font-weight: 600; font-size: 9.6pt; }
+  .proj-head .live { color: var(--accent); font-weight: 600; font-size: 7.8pt; letter-spacing: 0.4px; text-transform: uppercase; margin-left: 6px; }
+  .proj-desc { color: var(--muted); margin-top: 1px; }
+  .stack { color: var(--faint); font-size: 8.2pt; margin-top: 2px; }
+
+  .skillrow { display: flex; gap: 8px; margin-top: 2.5px; }
+  .skillkey { flex: 0 0 97px; font-weight: 600; font-size: 8.7pt; }
+  .skillval { color: var(--muted); font-size: 8.7pt; }
+
+  .edu { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; margin-top: 4px; }
+  .edu-left b { font-weight: 600; }
+  .edu-left span { color: var(--muted); }
+  .result { color: var(--accent); font-weight: 600; }
+
+  footer { margin-top: 9px; padding-top: 5px; border-top: 1px solid var(--line); color: var(--faint); font-size: 8.2pt; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <h1>Suh Blane Sanyang</h1>
+    <div class="role">Software Engineering Student</div>
+    <div class="contacts">
+      <span>suhblane@gmail.com</span><span>Buea, South West, Cameroon</span><br/>
+      <span><a href="https://suh-blane.vercel.app">suh-blane.vercel.app</a></span><span><a href="https://github.com/Blane47">github.com/Blane47</a></span><span><a href="https://www.linkedin.com/in/suh-blane-639090284/">linkedin.com/in/suh-blane-639090284</a></span>
+    </div>
+  </header>
+
+  <p class="summary">
+    Final-year Software Engineering student at the University of Buea, building full-stack
+    web applications for problems I can see around me &mdash; a hospital records system, a
+    municipal waste platform, a serverless expense tracker on AWS. I work mostly in
+    TypeScript and JavaScript with Next.js, React and Node, and I am looking for an
+    internship or graduate role where I can keep shipping real systems.
+  </p>
+
+  <h2>Experience</h2>
+
+  <div class="entry">
+    <div class="entry-head">
+      <div><span class="entry-title">Cloud Computing Intern</span>, <span class="entry-org">Zinger Systems</span></div>
+      <div class="entry-meta">Jun 2026 &ndash; Sep 2026 &middot; Buea</div>
+    </div>
+    <ul>
+      <li>Designed and deployed a production serverless application end to end on AWS &mdash; Cognito, Lambda, API Gateway and DynamoDB.</li>
+      <li>Defined the entire stack as infrastructure-as-code with AWS SAM / CloudFormation.</li>
+      <li>Set up CI/CD, monitoring and security controls including point-in-time recovery.</li>
+      <li>Worked through the AWS Certified Solutions Architect Associate (SAA-C03) curriculum.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <div><span class="entry-title">Full Stack Web Development Intern</span>, <span class="entry-org">Techarcgram</span></div>
+      <div class="entry-meta">2025 &middot; Buea</div>
+    </div>
+    <ul>
+      <li>Wrote server-side JavaScript with Node.js and Express, including routing and middleware.</li>
+      <li>Built a blog application with full create, edit and delete flows.</li>
+      <li>Consumed and tested REST APIs with Axios and Postman, including authenticated requests.</li>
+      <li>Built responsive layouts with CSS Grid, Flexbox and media queries; worked daily in Git and npm.</li>
+    </ul>
+  </div>
+
+  <h2>Selected Projects</h2>
+
+  <div class="proj">
+    <div class="proj-head">HospiCare EMR <span class="live">Live</span></div>
+    <div class="proj-desc">Electronic medical records and pharmacy stock for a district hospital in Cameroon. One patient flows from reception to doctor to pharmacy, every action persisted and linked.</div>
+    <div class="stack">Next.js &middot; TypeScript &middot; Prisma &middot; PostgreSQL &middot; Auth.js &middot; Tailwind &mdash; hospicare-emr.vercel.app</div>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head">Serverless Expense Tracker <span class="live">Live</span></div>
+    <div class="proj-desc">Full-stack expense tracking with authentication, CRUD and a spending dashboard, built serverless end to end and shipped through CI/CD.</div>
+    <div class="stack">React &middot; AWS Lambda &middot; Cognito &middot; DynamoDB &middot; AWS SAM &middot; CloudFront</div>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head">EcoPulse</div>
+    <div class="proj-desc">Four-part smart waste platform for Buea municipality: a React dashboard with live route maps and analytics, a REST API with JWT auth, and two React Native apps &mdash; crews and residents.</div>
+    <div class="stack">React &middot; React Native &middot; Expo &middot; Node.js &middot; Express &middot; MongoDB &middot; Leaflet</div>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head">CULTIA</div>
+    <div class="proj-desc">B.Tech design project with a senior student: a platform for teaching and preserving Cameroonian heritage. Modelled the domain end to end &mdash; ER, class and use-case diagrams &mdash; and worked on the design.</div>
+    <div class="stack">System design &middot; ER modelling &middot; UML &middot; Content workflow</div>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head">Saveurs du Cameroun</div>
+    <div class="proj-desc">Online ordering for a Cameroonian restaurant &mdash; categories, cart, registration and checkout with a printable receipt, plus an admin side for menu and orders. CEC319 coursework.</div>
+    <div class="stack">PHP &middot; MySQL &middot; JavaScript &middot; HTML &amp; CSS</div>
+  </div>
+
+  <h2>Education</h2>
+
+  <div class="edu">
+    <div class="edu-left"><b>B.Tech, Software Engineering</b> &nbsp;<span>College of Technology, University of Buea</span></div>
+    <div class="entry-meta">2024 &ndash; present</div>
+  </div>
+  <div class="edu">
+    <div class="edu-left"><b>GCE Advanced Level</b>, sciences &nbsp;<span>Sacred Heart College, Mankon &mdash; Bamenda</span> &nbsp;<span class="result">24 / 25 points</span></div>
+    <div class="entry-meta">2022 &ndash; 2024</div>
+  </div>
+  <div class="edu">
+    <div class="edu-left"><b>GCE Ordinary Level</b>, sciences &nbsp;<span>Sacred Heart College, Mankon &mdash; Bamenda</span> &nbsp;<span class="result">30 / 33 points</span></div>
+    <div class="entry-meta">2017 &ndash; 2022</div>
+  </div>
+
+  <h2>Technical Skills</h2>
+  <div class="skillrow"><div class="skillkey">Languages</div><div class="skillval">TypeScript, JavaScript, PHP, Dart, HTML, CSS</div></div>
+  <div class="skillrow"><div class="skillkey">Frontend</div><div class="skillval">React, Next.js, Tailwind CSS, Bootstrap</div></div>
+  <div class="skillrow"><div class="skillkey">Backend &amp; data</div><div class="skillval">Node.js, Express, Prisma, PostgreSQL, MySQL, DynamoDB, MongoDB</div></div>
+  <div class="skillrow"><div class="skillkey">Cloud &amp; infra</div><div class="skillval">AWS (EC2, Lambda, IAM, CloudFront, Cognito, DynamoDB), AWS SAM, Terraform, Vercel</div></div>
+  <div class="skillrow"><div class="skillkey">Tooling</div><div class="skillval">Git, Postman, npm, React Native / Expo</div></div>
+
+  <h2>Leadership</h2>
+  <div class="edu">
+    <div class="edu-left"><b>Millennium Fellow</b> &nbsp;<span>UN Academic Impact &amp; Millennium Campus Network</span></div>
+  </div>
+
+</div>
+</body>
+</html>
